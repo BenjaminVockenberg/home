@@ -1,0 +1,35 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "description": "a simple website project for personal purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenjaminVockenberg/home.git"
+  },
+  "keywords": [
+    "ben",
+    "benjamin",
+    "vockenberg",
+    "frontend",
+    "development"
+  ],
+  "author": "Benjamin Vockenberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenjaminVockenberg/home/issues"
+  },
+  "homepage": "https://github.com/BenjaminVockenberg/home#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-data": "^1.2.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "path": "^0.12.7"
+  }
+}
