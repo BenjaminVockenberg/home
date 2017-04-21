@@ -30,7 +30,8 @@ var gulp = require('gulp'),
   	pug = require('gulp-pug'),
   	prefix = require('gulp-autoprefixer'),
   	sass = require('gulp-sass'),
-  	browserSync = require('browser-sync');
+  	browserSync = require('browser-sync'),
+    uglify = require('gulp-uglify');
 
 /*
  * Directories here
@@ -39,6 +40,8 @@ var paths = {
   public: './app/',
   sass: './src/sass/',
   css: './app/css/',
+  jssrc: './src/js/',
+  jsmin: './app/', 
   data: './src/_data/'
 };
 
@@ -47,7 +50,7 @@ var paths = {
  * matching file name. index.pug - index.pug.json
  */
 gulp.task('pug', function () {
-  return gulp.src('./src/*.pug')
+  return gulp.src('./src/**/*.pug')
     //.pipe(data(function (file) {
       //return require(paths.data + path.basename(file.path) + '.json');
     //}))
@@ -60,6 +63,22 @@ gulp.task('pug', function () {
 });
 
 /**
+ * Compile .js files matching file name.
+ */
+gulp.task('uglify', function () {
+  return gulp.src('./src/**/*.js')
+    //.pipe(data(function (file) {
+      //return require(paths.data + path.basename(file.path) + '.json');
+    //}))
+    .pipe(uglify())
+    .on('error', function (err) {
+      process.stderr.write(err.message + '\n');
+      this.emit('end');
+    })
+    .pipe(gulp.dest(paths.jsmin));
+});
+
+/**
  * Recompile .pug files and live reload the browser
  */
 gulp.task('rebuild', ['pug'], function () {
@@ -69,7 +88,7 @@ gulp.task('rebuild', ['pug'], function () {
 /**
  * Wait for pug and sass tasks, then launch the browser-sync Server
  */
-gulp.task('browser-sync', ['sass', 'pug'], function () {
+gulp.task('browser-sync', ['sass', 'pug', 'uglify'], function () {
   browserSync({
     server: {
       baseDir: paths.public
@@ -104,11 +123,12 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
   gulp.watch(paths.sass + '**/*.scss', ['sass']);
-  gulp.watch('./src/**/*.pug', ['rebuild']);
+  gulp.watch(paths.jssrc + '**/*.js', ['uglify']);
+  gulp.watch('./src/**/*.pug', ['rebuild']);  
 });
 
 // Build task compile sass and pug.
-gulp.task('build', ['sass', 'pug']);
+gulp.task('build', ['sass', 'pug', 'uglify']);
 
 /**
  * Default task, running just `gulp` will compile the sass,
