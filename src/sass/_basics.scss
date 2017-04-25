@@ -1,0 +1,48 @@
+// ==== Basic Styles ==== //
+html {
+	-ms-text-size-adjust: 100%; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+html, body {
+	height: 100%; 
+	background-color: rgb( 255, 255, 255 );	
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: rgb( 0, 0, 0 );
+	line-height: 1.2em;
+	margin: 0 0 5% 0;
+}
+
+h1 {
+	font-size: 56px;
+	margin: 0;
+}
+
+h2 {
+	font-size: 48px;
+}
+
+h3 {
+	font-size: 32px;
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.4em;
+	margin: 0 0 10% 0;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	&:hover, &:focus {
+		text-decoration: underline;
+	}
+}
+
+span {
+	font-weight: bold;
+}

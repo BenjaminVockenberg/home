@@ -1,0 +1,36 @@
+// ==== Every Slide in wrap is 100% in height ==== //
+.wrap {
+	content: "";
+	min-height: 100%;
+	background-color: rgb( 255, 255, 255 );
+	background: rgb( 255, 255, 255 ) url( ../img/bg/new_header.jpg ) 50% 0 no-repeat;
+	background-size: cover;	
+}
+
+// ==== Content Layout Styles ==== //
+
+// === Header === //
+header {
+	
+    width: 100%;	
+
+    nav {
+        width: 100%;
+        padding: 0 2%;
+
+        p {
+            margin: 0;
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 3px black;
+        }
+
+        .service {
+            width: 25%;            
+            float: right;
+            padding: .5% 0;
+            text-align: center;            
+        }
+
+    }
+
+}
