@@ -2,30 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0 0 2% 0;
-}
-
-p {
-    margin: 0 0 1% 0;
-}
-
-a {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }    
-}
-
-span {
-    font-weight: bold;
+.cfloat {
+    clear: both;    
 }

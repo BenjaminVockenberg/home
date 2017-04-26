@@ -1,27 +1,3 @@
-//var gulp = require('gulp'),
-//	  sass = require('gulp-sass'),
-//		pug ) require('gulp-pug');
-
-//gulp.task('default', function() {
-  // place code for your default task here
-//});
-
-//gulp.task('style', function() {
-//	gulp.src('src/sass/**/*.scss')
-//		.pipe(sass().on('error', sass.logError))
-//		.pipe(gulp.dest('./app/css'));
-//});
-
-//gulp.task('pug', function() {
-//	gulp.src('src/views/**/*.pug')
-//		.pipe(pug().on('error', pug.logError))
-//		.pipe(gulp.dest('./app/'))
-//});
-
-//gulp.task('watch', function() {
-//	gulp.watch('src/sass/**/*.scss', ['style']);
-//});
-
 "use strict";
 
 var gulp = require('gulp'),
@@ -31,7 +7,8 @@ var gulp = require('gulp'),
   	prefix = require('gulp-autoprefixer'),
   	sass = require('gulp-sass'),
   	browserSync = require('browser-sync'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    image = require('gulp-image');
 
 /*
  * Directories here
@@ -42,7 +19,8 @@ var paths = {
   css: './app/css/',
   jssrc: './src/js/',
   jsmin: './app/', 
-  data: './src/_data/'
+  data: './src/_data/',  
+  imagedes: './app/'
 };
 
 /**
@@ -117,6 +95,20 @@ gulp.task('sass', function () {
     }));
 });
 
+
+/**
+ * Compress image files matching file name.
+ */
+gulp.task('uglify', function () {
+  return gulp.src('./src/**/*')    
+    .pipe(image())
+    .on('error', function (err) {
+      process.stderr.write(err.message + '\n');
+      this.emit('end');
+    })
+    .pipe(gulp.dest(paths.imagedes));
+});
+
 /**
  * Watch scss files for changes & recompile
  * Watch .pug files run pug-rebuild then reload BrowserSync
@@ -124,11 +116,12 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
   gulp.watch(paths.sass + '**/*.scss', ['sass']);
   gulp.watch(paths.jssrc + '**/*.js', ['uglify']);
+  gulp.watch('./src/img/*', ['image']);  
   gulp.watch('./src/**/*.pug', ['rebuild']);  
 });
 
 // Build task compile sass and pug.
-gulp.task('build', ['sass', 'pug', 'uglify']);
+gulp.task('build', ['sass', 'pug', 'image', 'uglify']);
 
 /**
  * Default task, running just `gulp` will compile the sass,
