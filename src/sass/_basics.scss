@@ -1,4 +1,8 @@
 // ==== Basic Styles ==== //
+
+$headlineColorStandard: rgb( 20, 20, 20 );
+$paragraphColorStandard: rgb( 20, 20, 20 );
+
 html {
 	-ms-text-size-adjust: 100%; /* 2 */
 	-webkit-text-size-adjust: 100%; /* 2 */
@@ -7,13 +11,14 @@ html {
 html, body {
 	height: 100%; 
 	background-color: rgb( 255, 255, 255 );	
-    font-family: sans-serif;
+    
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: rgb( 0, 0, 0 );
+	color: $headlineColorStandard;
 	line-height: 1.2em;
 	margin: 0 0 5% 0;
+	font-family: "Open SanS", sans-serif;
 }
 
 h1 {
@@ -30,9 +35,12 @@ h3 {
 }
 
 p {
-	font-size: 18px;
+	font-size: 22px;
 	line-height: 1.4em;
 	margin: 0 0 10% 0;
+	color: $paragraphColorStandard;
+	font-family: "Rajdhani", sans-serif;
+	line-height: 1.2em;
 }
 
 a {
