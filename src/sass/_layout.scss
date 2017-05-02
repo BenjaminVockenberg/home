@@ -15,10 +15,10 @@ section {
         &.layout50 {            
             width: 50%;
             float: left;
-            padding: 0 0 0 2%;  
+            padding: 0 2% 0 0;  
 
             &:nth-child(even) {
-                padding: 0 2% 0 0;               
+                padding: 0 0 0 2%;               
             }
         }
 
@@ -31,6 +31,7 @@ section {
     // sub classes of section
     &.intro {
         border-top: 2px solid rgb( 120, 120, 120 );
+        padding: 6% 5% 1% 5%;        
     }
 
 }
