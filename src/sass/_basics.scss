@@ -17,7 +17,7 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
 	color: $headlineColorStandard;
 	line-height: 1.2em;
-	margin: 0 0 5% 0;
+	margin: 0 0 2% 0;
 	font-family: "Open SanS", sans-serif;
 }
 
@@ -34,13 +34,16 @@ h3 {
 	font-size: 32px;
 }
 
+h4 {
+	font-size: 24px;
+}
+
 p {
 	font-size: 22px;
 	line-height: 1.4em;
-	margin: 0 0 10% 0;
+	margin: 0 0 2% 0;
 	color: $paragraphColorStandard;
-	font-family: "Rajdhani", sans-serif;
-	line-height: 1.2em;
+	font-family: "Rajdhani", sans-serif;	
 }
 
 a {
