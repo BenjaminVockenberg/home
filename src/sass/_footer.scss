@@ -1,17 +1,17 @@
 footer {
     width: 100%;
-    padding: 1% 5%;
+    padding: 1% 2.5%;
     background-color: rgb( 60, 60, 60 );
 
     h4, p {
         color: white;
-        text-align: center;
+        text-align: left;
     }
 
     article {
         width: 33.33%;
         float: left;
-        padding: 1%;
+        padding: 2% 2%;
         border-right: 1px solid rgb( 200, 200, 200 );   
 
         &:last-of-type {
