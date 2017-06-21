@@ -1,6 +1,9 @@
-@import "reset";    // standard csss reset classes
-@import "font";     // Google Fonts "OpenSans"
-@import "basics";   // basic styles like typo, links and so on
-@import "header";   // header that is width and height is 100%
-@import "layout";   // Page layout
-@import "footer";   // Footer
+
+//@import "reset";    // standard csss reset classes
+//@import "basics";   // basic styles like typo, links and so on
+//@import "header";   // header that is width and height is 100%
+//@import "layout";   // Page layout
+//@import "font";     // Google Fonts "OpenSans"
+//@import "footer";   // Footer
+
+@import "../../node_modules/bootstrap/dist/css/bootstrap"; // importing Bootstrap

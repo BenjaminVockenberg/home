@@ -8,7 +8,8 @@ var gulp = require('gulp'),
   	sass = require('gulp-sass'),
   	browserSync = require('browser-sync'),
     uglify = require('gulp-uglify'),
-    image = require('gulp-image');
+    image = require('gulp-image'),
+    clean = require('gulp-clean');
 
 /*
  * Directories here
@@ -20,7 +21,7 @@ var paths = {
   jssrc: './src/js/',
   jsmin: './app/', 
   data: './src/_data/',  
-  imagedes: './app/'
+  imagedes: './app/',  
 };
 
 /**
@@ -28,10 +29,7 @@ var paths = {
  * matching file name. index.pug - index.pug.json
  */
 gulp.task('pug', function () {
-  return gulp.src('./src/**/*.pug')
-    //.pipe(data(function (file) {
-      //return require(paths.data + path.basename(file.path) + '.json');
-    //}))
+  return gulp.src('./src/**/*.pug')    
     .pipe(pug())
     .on('error', function (err) {
       process.stderr.write(err.message + '\n');
@@ -44,10 +42,7 @@ gulp.task('pug', function () {
  * Compile .js files matching file name.
  */
 gulp.task('uglify', function () {
-  return gulp.src('./src/**/*.js')
-    //.pipe(data(function (file) {
-      //return require(paths.data + path.basename(file.path) + '.json');
-    //}))
+  return gulp.src('./src/**/*.js')    
     .pipe(uglify())
     .on('error', function (err) {
       process.stderr.write(err.message + '\n');
@@ -95,6 +90,15 @@ gulp.task('sass', function () {
     }));
 });
 
+/**
+ * handling font files from bootstrap
+ * glyphicons. So a bug of wrong rendered 
+ * glyphicon is fixed
+ */
+gulp.task('fonts', function () {
+  gulp.src('./node_modules/bootstrap/dist/fonts/**/*.{eot,svg,ttf,woff,woff2}')
+  .pipe(gulp.dest('./app/fonts'));
+});
 
 /**
  * Compress image files matching file name.
@@ -110,18 +114,28 @@ gulp.task('uglify', function () {
 });
 
 /**
+ * clean the app folder from unused folder, pug and scss files.
+ */
+gulp.task('clean', function () {
+  return gulp.src('./app/{sass,_data,**/*.pug}', {read: false})    
+    .pipe(clean());    
+});
+
+/**
  * Watch scss files for changes & recompile
  * Watch .pug files run pug-rebuild then reload BrowserSync
  */
 gulp.task('watch', function () {
   gulp.watch(paths.sass + '**/*.scss', ['sass']);
   gulp.watch(paths.jssrc + '**/*.js', ['uglify']);
-  gulp.watch('./src/img/*', ['image']);  
-  gulp.watch('./src/**/*.pug', ['rebuild']);  
+  gulp.watch(paths.fontssrc + '**/*', ['fonts']);
+  gulp.watch('./src/img/*', ['image']);
+  gulp.watch('./app/{sass,_data,**/*.scss,**/*.pug}', ['clean']);  
+  gulp.watch('./src/**/*.pug', ['rebuild']);    
 });
 
 // Build task compile sass and pug.
-gulp.task('build', ['sass', 'pug', 'image', 'uglify']);
+gulp.task('build', ['sass', 'pug', 'image', 'fonts', 'uglify', 'clean']);
 
 /**
  * Default task, running just `gulp` will compile the sass,
