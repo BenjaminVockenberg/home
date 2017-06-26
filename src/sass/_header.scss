@@ -10,7 +10,8 @@ body {
   width: 100%;
   height: 100%;
   height: calc( 100% - 1px );
-  background-image: url( 'https://c.stocksy.com/a/RcN300/z0/805779.jpg' );
+  background-image: url( '../img/bg/new_header.jpg' );
+  background-position-x: 50%;
   background-size: cover;
   background-attachment: fixed;
   
