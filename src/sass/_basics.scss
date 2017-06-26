@@ -3,17 +3,6 @@
 $headlineColorStandard: rgb( 20, 20, 20 );
 $paragraphColorStandard: rgb( 20, 20, 20 );
 
-html {
-	-ms-text-size-adjust: 100%; /* 2 */
-	-webkit-text-size-adjust: 100%; /* 2 */
-}
-
-html, body {
-	height: 100%; 
-	background-color: rgb( 255, 255, 255 );	
-    
-}
-
 h1, h2, h3, h4, h5, h6 {
 	color: $headlineColorStandard;
 	line-height: 1.2em;
@@ -21,39 +10,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Open SanS", sans-serif;
 }
 
-h1 {
-	font-size: 56px;
-	margin: 0;
-}
-
-h2 {
-	font-size: 48px;
-}
-
-h3 {
-	font-size: 32px;
-}
-
-h4 {
-	font-size: 24px;
-}
-
 p {
-	font-size: 22px;
+	font-size: 24px;
 	line-height: 1.4em;
 	margin: 0 0 2% 0;
 	color: $paragraphColorStandard;
 	font-family: "Rajdhani", sans-serif;	
-}
-
-a {
-	text-decoration: none;
-	color: rgb ( 0, 0, 0 );
-	&:hover, &:focus {
-		text-decoration: underline;
-	}
-}
-
-span {
-	font-weight: bold;
 }
