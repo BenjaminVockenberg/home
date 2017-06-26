@@ -1,13 +1,46 @@
 doctype html
-html
+html(lang="en")
     head
         title das ist eine Testseite
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
         link(rel="stylesheet" href="../css/main.css")
-    body       
-        div.container
-            section.row.justify-content-md-center
-                article.col-sm-3
-                    p das ist ein nützlicher Testseite
-                    span.glyphicon.glyphicon-tree-deciduous(aria-hidden="true")
-                article.col-sm-9
-                    p das war nötig um zu testen ob alles funktioniert
+    body
+        nav.navbar.navbar-inverse.navbar-fixed-top
+            .container-fluid
+                .navbar-header
+                    a(href="#").navbar-brand.glyphicon.glyphicon-home
+                .collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li.active
+                            a(href="#") Hi
+                        li
+                            a(href="#") About
+                        li
+                            a(href="#") Work
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            a(href="#") Username
+            
+        .wide
+            .col-xs-5.line
+            .col-xs-2.logo Logo
+            .col-xs-5.line
+
+        .container-fluid
+            .row
+                .text-center
+                    h1 V is for Vockenberg
+                .col-xs-1
+                .col-xs-10
+                    p PBR&amp;B man bun humblebrag, gentrify squid flannel seitan. Air plant mixtape XOXO williamsburg typewriter hammock polaroid green juice hell of viral 90's seitan vegan humblebrag meh. Synth twee jean shorts snackwave chartreuse chia pork belly chillwave fanny pack viral readymade adaptogen ramps.  
+                .col-xs-1
+
+            .row
+                .col-xs-1
+                .col-xs-5
+                    h2 Who am I
+                    p PBR&amp;B man bun humblebrag, gentrify squid flannel seitan. Air plant mixtape XOXO williamsburg typewriter.
+                .col-xs-5
+                    h2 Why I do Web-Dev
+                    p PBR&amp;B man bun humblebrag, gentrify squid flannel seitan. Air plant mixtape XOXO williamsburg typewriter hammock polaroid green juice hell of viral 90's seitan.
+                .col-xs-1
