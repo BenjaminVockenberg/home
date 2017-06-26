@@ -128,7 +128,7 @@ gulp.task('clean', function () {
 gulp.task('watch', function () {
   gulp.watch(paths.sass + '**/*.scss', ['sass']);
   gulp.watch(paths.jssrc + '**/*.js', ['uglify']);
-  gulp.watch(paths.fontssrc + '**/*', ['fonts']);
+  gulp.watch('./app/fonts/' + '**/*', ['fonts']);
   gulp.watch('./src/img/*', ['image']);
   gulp.watch('./app/{sass,_data,**/*.scss,**/*.pug}', ['clean']);  
   gulp.watch('./src/**/*.pug', ['rebuild']);    
