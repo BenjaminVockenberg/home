@@ -1,37 +1,4 @@
-.spacer {
+.row-spacer {
     width: 100%;
-    padding: 1% 0;
-}
-
-section {
-    width: 100%;
-    padding: 4% 5%;
-    border-top: 0;
-
-    article {
-        width: 100%;
-        background-color: rgb( 255, 255, 255 );
-
-        &.layout50 {            
-            width: 50%;
-            float: left;
-            padding: 0 2% 0 0;  
-
-            &:nth-child(even) {
-                padding: 0 0 0 2%;               
-            }
-        }
-
-        &.layout33 {
-            width: 33%;
-            float: left;
-        }
-    }
-
-    // sub classes of section
-    &.intro {
-        border-top: 2px solid rgb( 120, 120, 120 );
-        padding: 6% 5% 1% 5%;        
-    }
-
+    padding: 2% 0 0 0;
 }
