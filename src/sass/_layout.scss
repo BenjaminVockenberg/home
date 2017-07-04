@@ -2,3 +2,10 @@
     width: 100%;
     padding: 2% 0 0 0;
 }
+
+.dark {
+    background-color: rgb(0, 0, 0);
+    h1, h2, h3, h4, h5, h6, p, a, span, small {
+        color: rgb(255, 255, 255);
+    }
+}
