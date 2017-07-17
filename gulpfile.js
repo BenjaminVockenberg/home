@@ -131,7 +131,7 @@ gulp.task('watch', function () {
   gulp.watch('./app/fonts/' + '**/*', ['fonts']);
   gulp.watch('./src/img/*', ['image']);
   gulp.watch('./app/{sass,_data,**/*.scss,**/*.pug}', ['clean']);  
-  gulp.watch('./src/**/*.pug', ['rebuild']);    
+  gulp.watch('./src/**/*.pug', ['rebuild']);     
 });
 
 // Build task compile sass and pug.
