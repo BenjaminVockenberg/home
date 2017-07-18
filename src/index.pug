@@ -20,10 +20,9 @@ html(lang="en")
                     ul.nav.navbar-nav.navbar-right
                         li
                             a(href="#") Username
-            
         .wide
             .col-xs-5.line
-            .col-xs-2.logo 
+            .col-xs-2.logo Logo
             .col-xs-5.line
 
         .container-fluid
@@ -80,34 +79,4 @@ html(lang="en")
                 
             .row-spacer &nbsp;
 
-        footer.footer
-           
-            .row.dark
-                .row-spacer &nbsp;
-                .col-xs-1
-                .col-xs-5
-                    h4 Contact
-                    p
-                        | Benjamin Vockenberg
-                        br 
-                        | Sprendlinger Landstr. 23 
-                        br
-                        | 63069 Offenbach
-                    hr
-                    .row
-                        .col-xs-1
-                            span.glyphicon.glyphicon-earphone
-                        .col-xs-11
-                            p 
-                                a(href="tel:+491621033737") +49 (0)162 103 373 7
-                    .row
-                        .col-xs-1
-                            span.glyphicon.glyphicon-envelope
-                        .col-xs-11
-                            p 
-                                a(href="benjamin.vockenberg@gmail.com") benjamin.vockenberg@gmail.com
-
-                .col-xs-5
-                    h4 social media
-                    p twitter: @technokrat 
-                .col-xs-1
+        include _data/pug/footer.pug
