@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 68px;
+	font-size: 78px !important;
 }
 
 p {
@@ -19,5 +19,9 @@ p {
 	line-height: 1.4em;
 	margin: 0 0 2% 0;
 	color: $paragraphColorStandard;
-	font-family: "Rajdhani", sans-serif;	
+	font-family: "Rajdhani", sans-serif;
+	
+	&.greeting {
+		font-size: 42px;
+	}
 }
