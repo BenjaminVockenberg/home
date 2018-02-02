@@ -19,6 +19,7 @@ $(function(){
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
-    $('.greeting').text(phrases[randomNumber(0, phrases.length - 1)] + ' '+ since(1800, 99) + '.');    
+    $('.greeting')
+        .text(phrases[randomNumber(0, phrases.length - 1)] + ' '+ since(1800, 99) + '.');    
 
 });

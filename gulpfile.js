@@ -114,7 +114,7 @@ gulp.task('uglify', function () {
 });
 
 /**
- * clean the app folder from unused folder, pug and scss files.
+ * clean the app folder from unused folders, pug and scss files.
  */
 gulp.task('clean', function () {
   return gulp.src('./app/{sass,_data,**/*.pug}', {read: false})    
