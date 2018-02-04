@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/BenjaminVockenberg/home#readme",
   "devDependencies": {
+    "bower": "^1.8.2",
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
@@ -33,10 +34,11 @@
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.1.2",
-    "jquery": "^3.3.1",
     "path": "^0.12.7"
   },
   "dependencies": {
+    "angular": "^1.1.6",
+    "angular-route": "^1.1.6",
     "bootstrap": "^3.3.7"
   }
 }

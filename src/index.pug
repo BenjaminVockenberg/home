@@ -1,11 +1,17 @@
 doctype html
-html(lang="en")
+html(lang="en" ng-app="greeterApp")
     head
         title V is for Vockenberg
         meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
         link(rel="stylesheet" href="css/main.css")
-        script(src="js/jquery.min.js")
-        script(src="js/script.js")
+        //script(src="js/jquery.min.js")
+
+        script(src="js/angular.min.js")
+        script(src="js/angular-route.min.js")
+        //script(src="js/script.js")
+
+        script(src="js/homeGreeterMainCtrl/app.js")
+        script(src="js/homeGreeterMainCtrl/greet.component.js")
     body
         nav.navbar.navbar-inverse.navbar-fixed-top
             .container-fluid
@@ -32,8 +38,8 @@ html(lang="en")
                 .text-center
                     h1 V is for Vockenberg
                 .col-xs-1
-                .col-xs-10
-                    p(class="text-center greeting") Frontend developer since 1981
+                .col-xs-10                    
+                    greet-component Frontend developer since 1981
                 .col-xs-1
 
             .row-spacer &nbsp;
