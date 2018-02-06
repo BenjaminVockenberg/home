@@ -2,6 +2,7 @@
 angular.
   module('greeterApp').
   component('greetComponent', {
+    
     // $ctrl is alias for $scope wich never should be called directly
     template: '<p class="text-center greeting">{{ $ctrl.hi() }}</p>',
     controller: function homeGreeterMainCtrl() {
