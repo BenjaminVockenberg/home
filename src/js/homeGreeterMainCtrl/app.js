@@ -1,2 +1,2 @@
 // Define the greeterApp module
-angular.module('greeterApp', []);
+var app = angular.module('greeterApp', []);
