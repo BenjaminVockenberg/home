@@ -43,7 +43,7 @@ app.component('greetComponent', {
           return start + Math.floor(Math.random() * rnd);
         }
 
-        // generates  a random number from min to max
+        // generates a random number from "min" to "max"
         var randomNumber = function (min, max) {
           return Math.floor(Math.random() * (max - min + 1) + min);
         }
