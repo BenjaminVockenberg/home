@@ -19,7 +19,7 @@ var paths = {
   sass: './src/sass/',
   css: './app/css/',
   jssrc: './src/js/',
-  jsmin: './app/', 
+  jsmin: './app/js/', 
   data: './src/_data/',  
   imagedes: './app/',  
 };
@@ -42,7 +42,7 @@ gulp.task('pug', function () {
  * Compile .js files matching file name.
  */
 gulp.task('uglify', function () {
-  return gulp.src('./src/**/*.js')    
+  return gulp.src('./src/js/**/*.js')    
     .pipe(uglify())
     .on('error', function (err) {
       process.stderr.write(err.message + '\n');
@@ -103,8 +103,8 @@ gulp.task('fonts', function () {
 /**
  * Compress image files matching file name.
  */
-gulp.task('uglify', function () {
-  return gulp.src('./src/**/*')    
+gulp.task('image', function () {
+  return gulp.src('./src/img/**/*')    
     .pipe(image())
     .on('error', function (err) {
       process.stderr.write(err.message + '\n');
@@ -117,7 +117,7 @@ gulp.task('uglify', function () {
  * clean the app folder from unused folders, pug and scss files.
  */
 gulp.task('clean', function () {
-  return gulp.src('./app/{sass,_data,**/*.pug}', {read: false})    
+  return gulp.src('./app/{sass,_data,**/*.pug,tests}', {read: false})    
     .pipe(clean());    
 });
 
@@ -130,7 +130,7 @@ gulp.task('watch', function () {
   gulp.watch(paths.jssrc + '**/*.js', ['uglify']);
   gulp.watch('./app/fonts/' + '**/*', ['fonts']);
   gulp.watch('./src/img/*', ['image']);
-  gulp.watch('./app/{sass,_data,**/*.scss,**/*.pug}', ['clean']);  
+  gulp.watch('./app/{sass,_data,**/*.scss,**/*.pug, tests}', ['clean']);  
   gulp.watch('./src/**/*.pug', ['rebuild']);     
 });
 
