@@ -5,6 +5,8 @@ app.component('greetComponent', {
   template: '<p class="text-center greeting">{{ $ctrl.hi() }}</p>',
   controller: function homeGreeterMainCtrl() {
 
+    // TODO: Fix the digest loop issue within the greeterClass
+
     this.hi = function () {
 
       var phrases = [
