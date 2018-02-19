@@ -1,4 +1,4 @@
-function jesttest(a,b) {
+function jesttest(a, b) {
     return (a + b);
 }
 
