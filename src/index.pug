@@ -25,7 +25,7 @@ html(lang="en" ng-app="greeterApp")
                             a(href="#") Work                    
         .wide
             .col-xs-5.line
-            .col-xs-2.logo Logo
+            .col-xs-2.logo
             .col-xs-5.line
 
         .container-fluid
@@ -37,7 +37,7 @@ html(lang="en" ng-app="greeterApp")
                     h1 V is for Vockenberg
                 .col-xs-1
                 .col-xs-10  
-                    // here goes the greet.component with fallback                  
+                    // here goes the greeter.module with fallback                  
                     p(ng-controller="GreeterController" class="text-center greeting") {{ hi() }}                    
                 .col-xs-1
 
@@ -60,7 +60,8 @@ html(lang="en" ng-app="greeterApp")
                         | From October 2016 I'm working for 
                         mark Reservix GmbH
                         | in Frankfurt. 
-                .col-xs-5
+                .col-xs-1
+                .col-xs-4
                     h2 Contact me
                     .form-group
                         label(for="yourMail") Your Adress
@@ -75,3 +76,4 @@ html(lang="en" ng-app="greeterApp")
             .row-spacer &nbsp;
 
         include _data/pug/footer.pug
+        
