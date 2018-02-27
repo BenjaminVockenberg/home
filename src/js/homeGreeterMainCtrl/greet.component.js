@@ -36,7 +36,9 @@ app.controller('GreeterController', ['$scope', function($scope) {
     'Vockenberg was founded in ',
     'I ate my new blue underpants in ',
     'I sell my Magic The Gathering cards for at least $',
-    'Maybe the next Call of Duty will take place in '
+    'Maybe the next Call of Duty will take place in ',
+    'Doc Brown sends you back to ',
+    'You died in '
   ];
 
   /**
