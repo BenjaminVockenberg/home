@@ -38,7 +38,7 @@ html(lang="en" ng-app="greeterApp")
                 .col-xs-1
                 .col-xs-10  
                     // here goes the greet.component with fallback                  
-                    greet-component Frontend developer since 1981                   
+                    p(ng-controller="GreeterController" class="text-center greeting") {{ hi() }}                    
                 .col-xs-1
 
             .row-spacer &nbsp;
