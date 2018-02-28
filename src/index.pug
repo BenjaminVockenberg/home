@@ -24,9 +24,9 @@ html(lang="en" ng-app="greeterApp")
                         li
                             a(href="#") Work                    
         .wide
-            .col-xs-5.line
-            .col-xs-2.logo
-            .col-xs-5.line
+            .col-sm-5.line
+            .col-sm-2.logo
+            .col-sm-5.line
 
         .container-fluid
 
@@ -35,33 +35,28 @@ html(lang="en" ng-app="greeterApp")
             .row
                 .text-center
                     h1 V is for Vockenberg
-                .col-xs-1
-                .col-xs-10  
+                .col-sm-1
+                .col-sm-10  
                     // here goes the greeter.module with fallback                  
                     p(ng-controller="GreeterController" class="text-center greeting") {{ hi() }}                    
-                .col-xs-1
+                .col-sm-1
 
             .row-spacer &nbsp;
 
             // section with 2 columns
             .row
-                .col-xs-1
-                .col-xs-5
-                    h2 Who am I
-                    p 
-                        | My name is Benjamin Vockenberg. I'm working as a fontend developer in Frankfurt, Germany. I'm developing web appplications since 2011 for 
-                        mark Messe Frankfurt
-                        | for example. 
-                    p   
-                        | Before that time I was working for the advertisement agency 
-                        mark DynamicWorkflow 
-                        | as a Webdesigner. From 2012 I worked for media production company as a product owner for a digital brochure for the Messe Frankfurt.
-                    p   
-                        | From October 2016 I'm working for 
-                        mark Reservix GmbH
-                        | in Frankfurt. 
-                .col-xs-1
-                .col-xs-4
+                .col-sm-1
+                .col-sm-5
+                    h2  Hi, I'm Ben...
+                    
+                    p   simply Ben but my real name is Benjamin Vockenberg. I'm working as a fontend developer in Frankfurt, Germany. I'm doing dev-stuff for the Internet since 2007 as I leared how much fun it is to get things moved into the world wide web and earning money with it. 
+                    
+                    p   I also earned a lot of experience at the companies I worked for. Mostly I worked for advertisement agencies but I learned to use the most common web technologies there... Like HTML, CSS,Javascript, PHP, SQl... 
+                    
+                    p Then later in order to get my skills improved I learned how to create applications using the newest technologies like HTML5, CSS3, AngularJS and Laravel. If you want to know more about this time then... 
+                        
+                .col-sm-1
+                .col-sm-4
                     h2 Contact me
                     .form-group
                         label(for="yourMail") Your Adress
@@ -70,9 +65,25 @@ html(lang="en" ng-app="greeterApp")
                         label(for="yourText") Your text
                         textarea.form-control(rows="5")
                     button(type="submit").btn.btn-default Senden
-                .col-xs-1 
+                .col-sm-1                          
 
-            .row-spacer &nbsp;  
+            .row-spacer &nbsp;
+            .row-spacer &nbsp;
+
+            .row
+                .col-sm-1
+                .col-sm-3
+                    h3  What I can give
+                    p   I'm able to start web application projects from scratch using the most common and newest frameworks like Angular, React and ViuJS. I like JsUniteTesting, Github workflows and process automation such as gulp, grunt and webpack. No need for a big GUI for coding. The only thing I need is Atom, SublimeText or VSCode. I also like TypeScript or ES6 a lot. I know how to make responsive UI's with Bootstrap but I'm also able to use plain HTML5 and CSS3... So lets get started!
+                .col-sm-3
+                    h3  What I want
+                    p   The "what I want" is easy, "Its gaining" is complicated. I'm not a absolute guy, but it would be nice to work in a scrum-a-like workflow using team. I'm able to work alone if its needed, but I prefer to be part of a team. If there is a new approach in the frontend scene I would like to learn and share my knownledge by visiting workshops or conferences. I also like to stay near Frankfurt. 
+                .col-sm-3
+                    h3  What else is there?
+                    p   Since Dec. 2017 I'm proud to be the father of the most beautiful daughter in th world. I'm married with a powerpuff girl. She is a really tuff and lovely woman. Beside this I'm a hobby game developer and portrait artist as well. I like electronic music and I'm a big fan of sports cars... dreaming about to own a Lamborgini Aventator GT ...                             
+                .col-sm-2
+            
+            .row-spacer &nbsp;
             .row-spacer &nbsp;
 
         include _data/pug/footer.pug
