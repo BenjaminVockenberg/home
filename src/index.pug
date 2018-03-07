@@ -28,44 +28,41 @@ html(lang="en" ng-app="greeterApp")
             .col-sm-2.logo
             .col-sm-5.line
 
+        section(class="hi")
+
+            article
+                h1(class="center-text") V is for Vockenberg
+                p(ng-controller="GreeterController" class="center-text greeting") {{ hi() }}
+
+        section
+            article(class="layout75")
+                h2 Hi I'm Ben
+                
+                p   simply Ben but my real name is Benjamin Vockenberg. I'm working as a fontend developer in Frankfurt, Germany. I'm doing dev-stuff for the Internet since 2007 as I leared how much fun it is to get things moved into the world wide web and earning money with it. 
+                    
+                p   I also earned a lot of experience at the companies I worked for. Mostly I worked for advertisement agencies but I learned to use the most common web technologies there... Like HTML, CSS,Javascript, PHP, SQl... 
+                
+                p Then later in order to get my skills improved I learned how to create applications using the newest technologies like HTML5, CSS3, AngularJS and Laravel. If you want to know more about this time then... 
+
+            article(class="layout25")
+
+                h2 Wanted Poster
+
+                ul
+                    li Born in 1981
+                    li married 
+                    li father
+                        ul 
+                            li of a beautiful daughter
+                    li teamplayer
+                    li good communication skills 
+
+
+            .cfloat 
+
+        
+
         .container-fluid
-
-            .row-spacer &nbsp;
-
-            .row
-                .text-center
-                    h1 V is for Vockenberg
-                .col-sm-1
-                .col-sm-10  
-                    // here goes the greeter.module with fallback                  
-                    p(ng-controller="GreeterController" class="text-center greeting") {{ hi() }}                    
-                .col-sm-1
-
-            .row-spacer &nbsp;
-
-            // section with 2 columns
-            .row
-                .col-sm-1
-                .col-sm-5
-                    h2  Hi, I'm Ben...
-                    
-                    p   simply Ben but my real name is Benjamin Vockenberg. I'm working as a fontend developer in Frankfurt, Germany. I'm doing dev-stuff for the Internet since 2007 as I leared how much fun it is to get things moved into the world wide web and earning money with it. 
-                    
-                    p   I also earned a lot of experience at the companies I worked for. Mostly I worked for advertisement agencies but I learned to use the most common web technologies there... Like HTML, CSS,Javascript, PHP, SQl... 
-                    
-                    p Then later in order to get my skills improved I learned how to create applications using the newest technologies like HTML5, CSS3, AngularJS and Laravel. If you want to know more about this time then... 
-                        
-                .col-sm-1
-                .col-sm-4
-                    h2 Contact me
-                    .form-group
-                        label(for="yourMail") Your Adress
-                        input(type="email" class="form-control" id="yourmailtest" placeholder="E-Mail")
-                    .form-group
-                        label(for="yourText") Your text
-                        textarea.form-control(rows="5")
-                    button(type="submit").btn.btn-default Senden
-                .col-sm-1                          
 
             .row-spacer &nbsp;
             .row-spacer &nbsp;

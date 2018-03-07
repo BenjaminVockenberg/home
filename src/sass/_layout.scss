@@ -1,10 +1,78 @@
-.row-spacer {
+// Sections are blocks of articles 
+section {
     width: 100%;
-    padding: 2% 0 0 0;
+    padding: 2% 8% 2% 8%;
+    background-color: white;
+
+    &.spacer {
+        padding: 2% 0 0 0;
+        float: none;
+    }
+
+    // section wide "basics" changes
+    
+    ul {
+        font-family: "Rajdhani", sans-serif;
+        list-style-type: square;
+        
+        li {              
+            font-size: 28px;
+            margin: 0 0 0 10%;
+            font-weight: normal;
+            color: rgb( 20, 20, 20 );
+    
+            ul {
+                
+                li {
+                    margin: 0 0 0 5%;
+                    font-size: 24px;
+                }
+                
+            }
+        }
+    }
+
+    // Articles in Sections
+
+    article {
+        width: 100%;
+        padding: 0 2% 0 2%;
+
+        &.layout75,
+        &.layout50,
+        &.layout33,
+        &.layout25 {
+            float: left;
+        }
+
+        &.layout75 {
+            width: 75%;
+            padding: 0 2% 0 2%;            
+        }
+        
+        &.layout50 {
+            width: 50%;
+            padding: 0 2% 0 2%;            
+        }
+
+        &.layout33 {
+            width: 33,333%;
+            padding: 2% 0 0 0;            
+        }
+
+        &.layout25 {
+            width: 25%;
+            padding: 0 2% 0 2%;            
+        }
+    }
+}
+
+.center-text {
+    text-align: center;
 }
 
 .dark {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(40, 40, 40);
     
     h1, 
     h2, 
