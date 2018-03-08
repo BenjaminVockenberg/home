@@ -10,19 +10,17 @@ html(lang="en" ng-app="greeterApp")
         
         script(src="js/homeGreeterMainCtrl/app.js")
         script(src="js/homeGreeterMainCtrl/greet.component.js")       
+    
     body
-        nav.navbar.navbar-inverse.navbar-fixed-top
-            .container-fluid
-                .navbar-header
-                    a(href="#").navbar-brand.glyphicon.glyphicon-home
-                .collapse.navbar-collapse
-                    ul.nav.navbar-nav
-                        li.active
-                            a(href="#") Hi
-                        li
-                            a(href="#") About
-                        li
-                            a(href="#") Work                    
+        
+        nav 
+            ul
+                li Hi!
+                li My life
+                li Projects
+                li Lets talk
+                li Imprint
+
         .wide
             .col-sm-5.line
             .col-sm-2.logo
@@ -35,18 +33,22 @@ html(lang="en" ng-app="greeterApp")
                 p(ng-controller="GreeterController" class="center-text greeting") {{ hi() }}
 
         section
+            
             article(class="layout75")
-                h2 Hi I'm Ben
+                h2 Hi I'm Ben!
                 
-                p   simply Ben but my real name is 
+                p   Simply Ben but my full name is 
                     span Benjamin Vockenberg. 
                     | I'm working as a 
                     span fontend developer in Frankfurt, Germany. 
                     | I'm doing dev-stuff for the Internet since 2007 as I leared how much fun it is to get things moved into the world wide web and earning money with it. 
                     
-                p   I also earned a lot of experience at the companies I worked for. Mostly I worked for advertisement agencies but I learned to use the most common web technologies there... Like HTML, CSS,Javascript, PHP, SQl... 
+                p   I earned a lot of experience at the companies I worked for. Mostly I worked for advertisement agencies. I learned to use the most common web technologies there &ndash; HTML, CSS, Javascript, PHP, SQl... 
                 
-                p Then later in order to get my skills improved I learned how to create applications using the newest technologies like HTML5, CSS3, AngularJS and Laravel. If you want to know more about this time then... 
+                p Then later in order to get my skills improved I learned how to create applications using the newest technologies like HTML5, CSS3, 
+                    span Angular and a tiny little bit Laravel. 
+                    | If you want to know more about this time then... 
+                button read more
 
             article(class="layout25")
 
