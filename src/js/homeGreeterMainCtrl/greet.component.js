@@ -4,10 +4,11 @@
  * @namespace controller
  * @name GreeterController
  */
-app.controller('GreeterController', ['$scope', function($scope) {
+angular.module('greeterApp', [])
 
-  // Phrases Array
-  //TODO: Will be get via json soon
+  .controller('GreeterController', ['$scope', function($scope) {
+
+  // Phrases Array  
   var phrases = [
     'Handcrafted websites since ',
     'Frontend developer since ',
@@ -47,7 +48,7 @@ app.controller('GreeterController', ['$scope', function($scope) {
    * @param {number} rnd
    * @description will return a random number between start + rnd 
    */
-  var since = function (start, rnd) {
+  var since = function (start, rnd) {    
     return start + Math.floor(Math.random() * rnd);
   };
 
@@ -69,7 +70,12 @@ app.controller('GreeterController', ['$scope', function($scope) {
    * @desc delivers the generated phrase to the frontend
   */
   $scope.hi = function() {
-    return exportPhrase;
-  };  
+    return exportPhrase || 'Working like a machine';
+  };   
+
+  return {
+    since,
+    randomNumber    
+  };
   
 }]);
