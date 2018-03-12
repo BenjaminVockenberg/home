@@ -30,7 +30,7 @@ section {
     article {
         width: 100%;
         padding: 0 2% 0 2%;
-
+        
         &.layout75,
         &.layout50,
         &.layout33,
@@ -52,6 +52,14 @@ section {
 
         &.layout25 {
             width: 25%;      
+        }
+
+        .avatar {
+            width: 100%;
+
+            img {
+                width: 100%;                
+            }
         }
     }
 }
