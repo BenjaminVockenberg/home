@@ -1,14 +1,8 @@
-'use strict';
-
-/**
- * @namespace controller
- * @name GreeterController
- */
 angular.module('greeterApp', [])
 
-    .controller('GreeterController', function () {
+    .controller('GreeterController', ['$scope', function($scope) {
 
-        var vm = this;
+        'use strict';
 
         // Phrases Array  
         var phrases = [
@@ -44,41 +38,25 @@ angular.module('greeterApp', [])
             'You died in '
         ];
 
-        /**
-        * @name since
-        * @param {number} start 
-        * @param {number} rnd
-        * @description will return a random number between start + rnd 
-        */
+        
         var since = function (start, rnd) {
             return start + Math.floor(Math.random() * rnd);
         };
 
-        /**
-        * @name randomNumber
-        * @param {number} min 
-        * @param {number} max
-        * @description returns a random number between min and max
-        */
         var randomNumber = function (min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
         };
 
-        // generates a phrase out of the phraes Array 
+        // generates a phrase out of the phraes Array    
         var exportPhrase = phrases[randomNumber(0, phrases.length - 1)] + ' ' + since(1800, 99) + '.';
-
-        /** 
-        * @name hi
-        * @desc delivers the generated phrase to the frontend
-        */
-        // lint says use vm = this instead of $scope
-        vm.hi = function () {
-            return exportPhrase;
-        };
+        
+        $scope.hi = function () {
+            return exportPhrase;                       
+        };       
 
         return {
             since,
             randomNumber
         };
 
-    });
+    }]);

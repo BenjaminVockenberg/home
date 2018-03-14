@@ -1,4 +1,4 @@
-"use strict";
+
 
 var gulp = require('gulp'),
   	path = require('path'),
@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     image = require('gulp-image'),
     clean = require('gulp-clean');
-
+    
 /*
  * Directories here
  */
@@ -43,11 +43,11 @@ gulp.task('pug', function () {
  */
 gulp.task('uglify', function () {
   return gulp.src('./src/js/**/*.js')    
-    .pipe(uglify())
-    .on('error', function (err) {
-      process.stderr.write(err.message + '\n');
-      this.emit('end');
-    })
+    // .pipe(uglify())
+    // .on('error', function (err) {
+    //   process.stderr.write(err.message + '\n');
+    //   this.emit('end');
+    // })
     .pipe(gulp.dest(paths.jsmin));
 });
 
@@ -142,4 +142,4 @@ gulp.task('build', ['sass', 'pug', 'image', 'fonts', 'uglify', 'clean']);
  * compile the jekyll site, launch BrowserSync then watch
  * files for changes
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch'])
