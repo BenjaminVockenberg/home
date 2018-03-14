@@ -70,7 +70,9 @@ angular.module('greeterApp', [])
    * @desc delivers the generated phrase to the frontend
   */
   $scope.hi = function() {
+    
     return exportPhrase;
+    
   };   
 
   return {
