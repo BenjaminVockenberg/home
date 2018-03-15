@@ -18,3 +18,5 @@ This is a simple website project I created a long time ago. Originally it was me
   
   - it finally works with angularJS and CommonJS :)
   - added it to the package.json fur running a lint easy via npm run
+  
+  Bug with gulp uglify. right now, no way to fix that!
