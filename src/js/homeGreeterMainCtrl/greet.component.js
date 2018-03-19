@@ -11,7 +11,7 @@ angular.module('greeterApp', [])
             'Frontend developer since ',
             'Expert for responsive design since ',
             'Lost in Javascript since ',
-            'Coffee = new code lines: ',
+            'One Coffee = new code lines: ',
             'No incidents since ',
             'Working without sleep since ',
             'Growing a beard since ',
