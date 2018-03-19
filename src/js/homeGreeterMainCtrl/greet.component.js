@@ -4,7 +4,8 @@ angular.module('greeterApp', [])
 
         'use strict';
 
-        // Phrases Array  
+        // Phrases Array
+        // Todo: Outsource to a API  
         var phrases = [
             'Handcrafted websites since ',
             'Frontend developer since ',
@@ -37,12 +38,23 @@ angular.module('greeterApp', [])
             'Doc Brown sends you back to ',
             'You died in '
         ];
-
         
+        /**
+         * @name since
+         * @param {Number} start 
+         * @param {Number} rnd
+         * @returns {Number}  
+         */
         var since = function (start, rnd) {
             return start + Math.floor(Math.random() * rnd);
         };
 
+        /**
+         * @name randomNumber
+         * @param {Number} min 
+         * @param {Number} max
+         * @returns {Number} 
+         */
         var randomNumber = function (min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
         };
@@ -50,13 +62,18 @@ angular.module('greeterApp', [])
         // generates a phrase out of the phraes Array    
         var exportPhrase = phrases[randomNumber(0, phrases.length - 1)] + ' ' + since(1800, 99) + '.';
         
+        /**
+         * @name $scope.hi
+         * @returns {String}
+         */
         $scope.hi = function () {
             return exportPhrase;                       
-        };       
-
+        };
+        
+        // needet for jest testing
         return {
-            since,
-            randomNumber
+            since : since,
+            randomNumber : randomNumber
         };
 
     }]);
