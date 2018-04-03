@@ -20,3 +20,5 @@ This is a simple website project I created a long time ago. Originally it was me
   - added it to the package.json fur running a lint easy via npm run
   
   fiexed: Bug with gulp uglify. 
+  
+  Missing code... did I delete some thing :(
