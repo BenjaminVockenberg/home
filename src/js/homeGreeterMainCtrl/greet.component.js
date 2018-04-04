@@ -1,6 +1,6 @@
-angular.module('greeterApp', ['ng'])
+var greeterApp = angular.module('greeterApp', ['ng']);
 
-    .controller('GreeterController', ['$scope', '$log', '$http', '$q', 'phrasesService', 
+    greeterApp.controller('GreeterController', ['$scope', '$log', '$http', '$q', 'phrasesService', 
     function($scope, $log, $http, $q, phrasesService) {
 
         'use strict';        
@@ -49,20 +49,7 @@ angular.module('greeterApp', ['ng'])
             randomNumber : randomNumber
         };
 
-    }])   
+    }]);   
 
     // Todo: sourcin out intoi a separat fiel... 
-    // Todo: writing tests
-    .service('phrasesService', ['$http', '$q', function($http, $q) {
-        
-        var deferred = $q.defer();
-        
-        $http.get('../../js/homeGreeterMainCtrl/greeter.phrases.json').then(function(data) {
-            deferred.resolve(data);
-        });
-
-        this.getPhrases = function(){
-            return deferred.promise;
-        };       
-
-    }]);
+    
