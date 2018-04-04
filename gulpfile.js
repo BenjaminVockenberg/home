@@ -1,5 +1,3 @@
-
-
 var gulp = require('gulp'),
   	path = require('path'),
   	data = require('gulp-data'),
@@ -123,7 +121,7 @@ gulp.task('image', function () {
  * clean the app folder from unused folders, pug and scss files.
  */
 gulp.task('clean', function () {
-  return gulp.src('./app/{sass,_data,**/*.pug,tests}', {read: false})    
+  return gulp.src('./app/{sass,_data,**/*.pug,tests}', { read: false })    
     .pipe(clean());    
 });
 
@@ -136,7 +134,7 @@ gulp.task('watch', function () {
   gulp.watch(paths.jssrc + '**/*.js', ['uglify']);
   gulp.watch('./app/fonts/' + '**/*', ['fonts']);
   gulp.watch('./src/img/*', ['image']);
-  gulp.watch('./app/{sass,_data,**/*.scss,**/*.pug, tests}', ['clean']);  
+  gulp.watch('./app/{sass,**/*.scss,**/*.pug, tests}', ['clean']);  
   gulp.watch('./src/**/*.pug', ['rebuild']);     
 });
 
