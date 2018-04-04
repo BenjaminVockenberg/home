@@ -56,6 +56,14 @@ gulp.task('uglify', function () {
 });
 
 /**
+ * Process .json files matching file name.
+ */
+gulp.task('json', function () {
+  return gulp.src('./src/js/**/*.json')    
+    .pipe(gulp.dest(paths.jsmin));
+});
+
+/**
  * Recompile .pug files and live reload the browser
  */
 gulp.task('rebuild', ['pug'], function () {
@@ -65,7 +73,7 @@ gulp.task('rebuild', ['pug'], function () {
 /**
  * Wait for pug and sass tasks, then launch the browser-sync Server
  */
-gulp.task('browser-sync', ['sass', 'pug', 'uglify'], function () {
+gulp.task('browser-sync', ['sass', 'pug', 'uglify', 'json'], function () {
   browserSync({
     server: {
       baseDir: paths.public
@@ -132,6 +140,7 @@ gulp.task('clean', function () {
 gulp.task('watch', function () {
   gulp.watch(paths.sass + '**/*.scss', ['sass']);
   gulp.watch(paths.jssrc + '**/*.js', ['uglify']);
+  gulp.watch(paths.jssrc + '**/*.json', ['json']);
   gulp.watch('./app/fonts/' + '**/*', ['fonts']);
   gulp.watch('./src/img/*', ['image']);
   gulp.watch('./app/{sass,**/*.scss,**/*.pug, tests}', ['clean']);  
@@ -139,7 +148,7 @@ gulp.task('watch', function () {
 });
 
 // Build task compile sass and pug.
-gulp.task('build', ['sass', 'pug', 'image', 'fonts', 'uglify', 'clean']);
+gulp.task('build', ['sass', 'pug', 'image', 'fonts', 'uglify', 'json', 'clean']);
 
 /**
  * Default task, running just `gulp` will compile the sass,
