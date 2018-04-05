@@ -1,5 +1,12 @@
 var greeterApp = angular.module('greeterApp', ['ng']);
 
+    greeterApp.component('greeterComponent', {
+        templateUrl: 'js/homeGreeterMainCtrl/greet.component.html',
+        bindings: {
+          out: '='
+        }
+    });
+    
     greeterApp.controller('GreeterController', ['$scope', '$log', '$http', '$q', 'phrasesService', 
     function($scope, $log, $http, $q, phrasesService) {
 
@@ -49,7 +56,4 @@ var greeterApp = angular.module('greeterApp', ['ng']);
             randomNumber : randomNumber
         };
 
-    }]);   
-
-    // Todo: sourcin out intoi a separat fiel... 
-    
+    }]);      
