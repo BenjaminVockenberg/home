@@ -1,4 +1,4 @@
-greeterApp.service('phrasesService', ['$http', '$q', function($http, $q) {
+greeterApp.service('phrasesService', ['$http', '$q', '$log', function($http, $q, $log) {
         
         var deferred = $q.defer();
         
@@ -6,8 +6,12 @@ greeterApp.service('phrasesService', ['$http', '$q', function($http, $q) {
             deferred.resolve(data);
         });
 
-        this.getPhrases = function(){
+        /**
+         * @name getPhrases
+         * @returns promise { json }
+         */
+        this.getPhrases = function(){            
             return deferred.promise;
-        };       
+        };         
 
     }]);

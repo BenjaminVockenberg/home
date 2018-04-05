@@ -29,14 +29,15 @@ html(lang="en" ng-app="greeterApp")
 
         section(class="hi")
 
-            article
+            article(ng-controller="GreeterController")
                 h1(class="center-text") V is for Vockenberg
-                p(ng-controller="GreeterController" class="center-text greeting") {{ hi() || 'Handcrafted websites since 1873!' }}
+                //p(ng-controller="GreeterController" class="center-text greeting") {{ hi() || 'Handcrafted websites since 1873!' }}
+                <greeter-component out="hi()"></greeter-component>
 
         section
             
             article(class="layout75")
-                h2 Hi I'm Ben!
+                h2 Hello I'm Ben!
                 
                 p   Simply Ben but my full name is 
                     span Benjamin Vockenberg. 
