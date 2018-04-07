@@ -39,7 +39,18 @@ section {
         }
 
         &.layout75 {
-            width: 75%;                        
+            width: 75%; 
+
+            .avatar {
+                width: 20%;
+                float: left;
+                margin: 0 3% 1% 0;            
+    
+                img {
+                    width: 100%;                
+                }
+                
+            }
         }
         
         &.layout50 {
@@ -52,15 +63,9 @@ section {
 
         &.layout25 {
             width: 25%;      
-        }
+        }      
 
-        .avatar {
-            width: 100%;
-
-            img {
-                width: 100%;                
-            }
-        }
+        
     }
 }
 
