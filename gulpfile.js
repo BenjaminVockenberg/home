@@ -19,7 +19,7 @@ var paths = {
   jssrc: './src/js/',
   jsmin: './app/js/', 
   data: './src/_data/',  
-  imagedes: './app/',  
+  imagedes: './app/img/',  
 };
 
 /**
@@ -142,7 +142,7 @@ gulp.task('watch', function () {
   gulp.watch(paths.jssrc + '**/*.js', ['uglify']);
   gulp.watch(paths.jssrc + '**/*.json', ['json']);
   gulp.watch('./app/fonts/' + '**/*', ['fonts']);
-  gulp.watch('./src/img/*', ['image']);
+  gulp.watch('./src/img/**/*', ['image']);
   gulp.watch('./app/{sass,**/*.scss,**/*.pug, tests}', ['clean']);  
   gulp.watch('./src/**/*.pug', ['rebuild']);     
 });

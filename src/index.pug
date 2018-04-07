@@ -30,40 +30,41 @@ html(lang="en" ng-app="greeterApp")
         section(class="hi")
 
             article(ng-controller="GreeterController")
-                h1(class="center-text") V is for Vockenberg
-                //p(ng-controller="GreeterController" class="center-text greeting") {{ hi() || 'Handcrafted websites since 1873!' }}
+                h1(class="center-text") V is for Vockenberg                
                 <greeter-component out="hi()"></greeter-component>
 
-        section
+        section 
             
             article(class="layout75")
-                h2 Hello I'm Ben!
+                h2 Hey there I'm Ben!
+
+                .avatar
+                    img(src="img/content/benjaminvockenberg.jpg" alt="picture of me")
                 
-                p   Simply Ben but my full name is 
-                    span Benjamin Vockenberg. 
-                    | I'm working as a 
+                p   I'm a 
                     span fontend developer in Frankfurt, Germany. 
-                    | I'm doing dev-stuff for the Internet since 2007 as I leared how much fun it is to get things moved into the world wide web and earning money with it. 
+                    | I'm doing Internet stuff since 2007 as I leared how much fun it is to get things moved into the WWW and earning money with it. 
                     
-                p   I earned a lot of experience at the companies I worked for. Mostly I worked for advertisement agencies. I learned to use the most common web technologies there &ndash; HTML, CSS, Javascript, PHP, SQl... 
+                p   I made a lot of good experiences at the advertising companies I was working for. Mostly as web and web-developer using all kinds of web based programing languages... 
                 
-                p In order to get my skills improved I learned how to create applications using the newest technologies like HTML5, CSS3, 
+                p Soon I learned how to create web applications using the newest technologies like HTML5, CSS3, 
                     span Angular and a tiny little bit Laravel. 
                     | If you want to know more about this time then... 
                     a(href="#") read more...
 
+            
+
             article(class="layout25")
 
-                h2 Wanted Poster
-
-                .avatar
+                h2 Wanted?                
 
                 ul
-                    li released in 1981
+                    li born in 1981
                     li married with children                    
-                    li always hungry
-                    li car enthusiast
-                    li team player
+                    li always willing to learn
+                    li always de-escalating
+                    li I prefer vegetarian food 
+                    li I like to play in a team
             
             .cfloat
 
@@ -72,17 +73,19 @@ html(lang="en" ng-app="greeterApp")
             article(class="layout33")
 
                 h3  What I can give
-                p   I'm able to start web application projects from scratch using the most common and newest frameworks like Angular, React and ViuJS. I like JsUniteTesting, Github workflows and process automation such as gulp, grunt and webpack. No need for a big GUI for coding. The only thing I need is Atom, SublimeText or VSCode. I also like TypeScript or ES6 a lot. I know how to make responsive UI's with Bootstrap but I'm also able to use plain HTML5 and CSS3... So lets get started!
+                p   I'm able to start web app projects from scratch using modern frameworks like Angular, React and VueJS. I like unit testing, Git and process automation such as gulp and webpack. I also like TypeScript and ES6 a lot. I know how to make responsive websites and apps with or without frameworks.
 
             article(class="layout33")
 
                 h3  What I want
-                p   The "what I want" is easy, "Its gaining" is complicated. I'm not a absolute guy, but it would be nice to work in a scrum-a-like workflow using team. I'm able to work alone if its needed, but I prefer to be part of a team. If there is a new approach in the frontend scene I would like to learn and share my knownledge by visiting workshops or conferences. I also like to stay near Frankfurt.
+                p   I prefer to work in a scrum-a-like workflow using team. I'm able to work alone if its needed, but I prefer to be part of a team. I'm always willing to learn and share knowledge by visiting UserGroups and conferences. I also like to work near Frankfurt but at least in Germany.
 
             article(class="layout33")
 
                 h3  What else is there?
-                p   Since Dec. 2017 I'm proud to be the father of the most beautiful daughter in th world. I'm married with a powerpuff girl. She is a really tuff and lovely woman. Beside this I'm a hobby game developer and portrait artist as well. I like electronic music and I'm a big fan of sports cars... dreaming about to own a Lamborgini Aventator GT ...
+                p   Since Dec. 2017 I'm proud to be father of the most beautiful daughter in th world. I'm married with a powerpuff girl. Beside this I'm a hobby 
+                    a(href="https://psychomonstercom.itch.io/") game developer 
+                    | and digital portrait artist as well. I like electronic music and I'm a big fan of sports cars... I think I can cook very well!
                 
             .cfloat
 
