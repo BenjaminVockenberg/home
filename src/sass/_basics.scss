@@ -36,6 +36,16 @@ p {
 	}
 }
 
+a {
+	text-decoration: none;
+	border-bottom: 2px dashed rgb( 220, 220, 255 );
+
+	&:hover {
+		text-decoration: none !important;
+		background-color: rgb( 220, 220, 255 );
+	}
+}
+
 span {
 	background-color: rgb(220, 220, 255);	
 }
