@@ -33,9 +33,10 @@ html(lang="en" ng-app="greeterApp")
                 h1(class="center-text") V is for Vockenberg                
                 <greeter-component out="hi()"></greeter-component>
 
-        section 
-            
-            article(class="layout75")
+        section           
+
+            article.layout75
+                
                 h2 Hey there I'm Ben!
 
                 .avatar
@@ -54,12 +55,12 @@ html(lang="en" ng-app="greeterApp")
 
             
 
-            article(class="layout25")
+            article.layout25
 
-                h2 Wanted?                
+                h2 by the way                            
 
                 ul
-                    li born in 1981
+                    li born in Nov. 1981
                     li married with children                    
                     li always willing to learn
                     li always de-escalating
@@ -70,21 +71,21 @@ html(lang="en" ng-app="greeterApp")
 
         section
 
-            article(class="layout33")
+            article.layout33
 
                 h3  What I can give
                 p   I'm able to start web app projects from scratch using modern frameworks like 
                     strong Angular, React and VueJS. 
                     | I like unit testing, Git and process automation such as gulp and webpack. I also like TypeScript and ES6 a lot. I know how to make responsive websites and apps with or without frameworks.
 
-            article(class="layout33")
+            article.layout33
 
                 h3  What I want
                 p   I prefer to work in a 
                     strong scrum 
                     | using team. I'm able to work alone if its needed, but I prefer to be part of a team. I'm always willing to learn and share knowledge by visiting UserGroups and conferences. I also like to work near Frankfurt but at least in Germany.
 
-            article(class="layout33")
+            article.layout33
 
                 h3  What else is there?
                 p   Since Dec. 2017 I'm proud to be father of the most beautiful daughter in th world. I'm married with a powerpuff girl. Beside this I'm a hobby 
@@ -92,6 +93,75 @@ html(lang="en" ng-app="greeterApp")
                     | and digital portrait artist as well. I like electronic music and I'm a big fan of sports cars... I think I can cook very well!
                 
             .cfloat
+
+        section
+
+            h2 Frontend Skillz
+
+            article.layout50
+
+                h3 Angular &amp; Co.
+                
+                .avatar                    
+                    img(src="img/content/angular.svg" alt="angular logo svg")
+                
+                p I like Javascript because it is best for learning and using functional programming. The features of ES6 are awesome. But in order to create big scaled web applications It is good to know you can count on lots of helping hands. Framesworks can handle lots of stuff you would have take care of by your self. There are many frameworks out there, but I prefer using Angular for more complex applications and VueJs for more or less simpler projects.
+
+            article.layout50
+
+                h3 Vue &amp; friends
+                
+                .avatar                    
+                    img(src="img/content/vuejslogo.svg" alt="vue logo svg")
+                
+                p I like Javascript because it is best for learning and using functional programming. The features of ES6 are awesome. But in order to create big scaled web applications It is good to know you can count on lots of helping hands. Framesworks can handle lots of stuff you would have take care of by your self. There are many frameworks out there, but I prefer using Angular for more complex applications and VueJs for more or less simpler projects.
+
+            //article.layout50
+
+                article.layout50
+
+                    h3 Angular
+                    img(src="img/content/angular.svg" alt="angular logo svg")
+                         
+
+                article.layout50
+                    
+                    h3 VueJS                     
+                    img(src="img/content/vuejslogo.svg" alt="vue logo svg")
+
+        .cfloat
+        
+        section
+
+            h2 There is more I know to work with                        
+                
+            article.layout33
+                
+                h3 NodeJS
+                .avatar
+                    img(src="img/content/angular.svg" alt="angular logo svg")
+                p The easiest way to build an web application I know is NodeJs. Easy to setup, Flexible as hell and well documented. 
+                
+            article.layout33
+                
+                h3 Gulp
+                .avatar
+                    img(src="img/content/gulplogo.svg" alt="angular logo svg")
+                p Deploying a web application with all its diffrent things you must do or keep in mind is anoying. Using gulp automation is a 
+                    i first prize
+                    | situation. 
+                
+            article.layout33
+                
+                h3 Webpack                
+                .avatar
+                    img(src="img/content/webpack.svg" alt="angular logo svg")
+                p   A better and more modern approach of process automation. It handles all your needs and you can focus more on being productive! 
+                        
+
+            .cfloat
+
+        .cfloat
 
         include _data/pug/footer.pug
         

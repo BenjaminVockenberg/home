@@ -34,7 +34,8 @@ section {
         &.layout75,
         &.layout50,
         &.layout33,
-        &.layout25 {
+        &.layout25,
+        &.layout10 {
             float: left;            
         }
 
@@ -54,18 +55,42 @@ section {
         }
         
         &.layout50 {
-            width: 50%;                    
+            width: 50%;
+            
+            .avatar {
+                width: 20%;
+                float: left;
+                margin: 0 3% 1% 0;            
+    
+                img {
+                    width: 100%;                
+                }
+                
+            }
         }
 
         &.layout33 {
-            width: 33.333%;     
+            width: 33.333%;
+            
+            .avatar {
+                width: 20%;
+                float: left;
+                margin: 0 3% 1% 0;            
+    
+                img {
+                    width: 100%;                
+                }
+                
+            }
         }
 
         &.layout25 {
             width: 25%;      
-        }      
-
+        }
         
+        &.layout10 {
+            width: 10%;      
+        }        
     }
 }
 
