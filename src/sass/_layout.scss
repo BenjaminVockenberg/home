@@ -84,6 +84,20 @@ section {
     }
 }
 
+.disturber {
+    width: 100%;
+    height: 350px;    
+    background-image: url( '../img/bg/new_header.jpg' );
+    background-position-x: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+       
+    
+    img {
+        width: 100%;
+    }
+  }
+
 .center-text {
     text-align: center;
 }
