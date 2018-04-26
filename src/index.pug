@@ -1,5 +1,5 @@
 doctype html
-html(lang="en" ng-app="greeterApp")
+html(lang="en")
     head
         title V is for Vockenberg
         meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
@@ -27,7 +27,7 @@ html(lang="en" ng-app="greeterApp")
             .col-sm-2.logo
             .col-sm-5.line
 
-        section(class="hi")
+        section(class="hi", ng-app="greeterApp")
 
             article(ng-controller="GreeterController")
                 h1(class="center-text") V is for Vockenberg                
@@ -129,7 +129,7 @@ html(lang="en" ng-app="greeterApp")
                 h3 NodeJS
                 .avatar.land
                     img(src="img/content/node_logo.svg" alt="angular logo svg")
-                p The easiest way to build an web application I know is NodeJs. Easy to setup, Flexible as hell and well documented. And its awesome node package manager is frequently used in all of my projects!
+                p The easiest way to build a strong web application I know is NodeJs. Easy to setup, Flexible as hell and well documented. Besinde this I love it's awesome package manager. It is frequently used in most of all my projects!
                 
             article.layout33
                 
@@ -149,7 +149,7 @@ html(lang="en" ng-app="greeterApp")
                 h3 Webpack
                 .avatar
                     img(src="img/content/webpack.svg" alt="angular logo svg")
-                p   A better and more modern approach of process automation. It handles all your needs and you can focus more on being productive! Its most beein used in modern frameworks like ANgularCLI and VueCLI. 
+                p   A better and more modern approach of process automation. It handles all your needs and you can focus more on being productive! Its most beein used in modern frameworks like AngularCLI and VueCLI. For those who're using Angular you can use it with no configuration!
                         
 
             .cfloat
