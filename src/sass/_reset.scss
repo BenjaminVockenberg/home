@@ -4,6 +4,12 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition:    all 0.2s ease-in;
+    -o-transition:      all 0.2s ease-in;
+    -ms-transition:     all 0.2s ease-in;
+    transition:         all 0.2s ease-in;    
 }
 
 .row {

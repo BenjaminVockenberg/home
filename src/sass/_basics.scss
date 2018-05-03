@@ -35,15 +35,32 @@ p {
 	&.greeting {
 		font-size: 42px;
 	}
+
+	&.capit {
+		&:first-letter {
+			color: rgb( 20, 20, 20 );
+			float: left;
+			font-weight: bolder;
+			//font-family: Georgia;
+			font-size: 85px;
+			line-height: 60px;			
+			padding: 8px 8px 0 3px;
+
+			
+			text-shadow: 4px 0 0 rgb( 0, 112, 187 );
+			
+		}
+	}
+	
 }
 
 a {
 	text-decoration: none;
-	border-bottom: 2px dashed rgb( 220, 220, 255 );
+	border-bottom: 2px dashed rgb( 220, 220, 255 );	
 
 	&:hover {
 		text-decoration: none !important;
-		background-color: rgb( 220, 220, 255 );
+		background-color: rgb( 220, 220, 255 );		
 	}
 }
 
