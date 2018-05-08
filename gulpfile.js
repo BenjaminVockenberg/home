@@ -7,7 +7,9 @@ var gulp = require('gulp'),
   	browserSync = require('browser-sync'),
     uglify = require('gulp-uglify'),
     image = require('gulp-image'),
-    clean = require('gulp-clean');
+    clean = require('gulp-clean'),
+    eslint = require('gulp-eslint'),
+    gulpIf = require('gulp-if');
     
 /*
  * Directories here
@@ -34,6 +36,28 @@ gulp.task('pug', function () {
       this.emit('end');
     })
     .pipe(gulp.dest(paths.public));
+});
+
+/**
+ * @name Eslint
+ * @param {*} file 
+ */
+function isFixed(file) {
+  // Has ESLint fixed the file contents?
+  return file.eslint != null && file.eslint.fixed;
+}
+
+gulp.task('lint', function() {
+
+  return gulp.src(['src/js/**/*.js', 
+      '!'+paths.jssrc+'angular.min.js', 
+      '!'+paths.jssrc+'angular-mocks.js', 
+      '!'+paths.jssrc+'angular-route.min.js'])
+      .pipe(eslint())      
+      .pipe(eslint.format())
+      .pipe(eslint({fix:true}))
+      .pipe(gulpIf(isFixed, gulp.dest(paths.jssrc)));
+
 });
 
 /**
