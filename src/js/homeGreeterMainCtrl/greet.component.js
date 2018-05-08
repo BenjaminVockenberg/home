@@ -1,13 +1,13 @@
 var greeterApp = angular.module('greeterApp', ['ng']);
 
-    greeterApp.component('greeterComponent', {
-        templateUrl: 'js/homeGreeterMainCtrl/greet.component.html',
-        bindings: {
-          out: '='
-        }
-    });
+greeterApp.component('greeterComponent', {
+    templateUrl: 'js/homeGreeterMainCtrl/greet.component.html',
+    bindings: {
+        out: '='
+    }
+});
     
-    greeterApp.controller('GreeterController', ['$scope', '$log', '$http', '$q', 'phrasesService', 
+greeterApp.controller('GreeterController', ['$scope', '$log', '$http', '$q', 'phrasesService', 
     function($scope, $log, $http, $q, phrasesService) {
 
         'use strict';        
