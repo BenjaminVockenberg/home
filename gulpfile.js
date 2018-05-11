@@ -46,7 +46,6 @@ function isFixed(file) {
   // Has ESLint fixed the file contents?
   return file.eslint != null && file.eslint.fixed;
 }
-
 gulp.task('lint', function() {
 
   return gulp.src(['src/js/**/*.js', 
@@ -55,7 +54,7 @@ gulp.task('lint', function() {
       '!'+paths.jssrc+'angular-route.min.js'])
       .pipe(eslint())      
       .pipe(eslint.format())
-      .pipe(eslint({fix:true}))
+      .pipe(eslint({ fix:true }))
       .pipe(gulpIf(isFixed, gulp.dest(paths.jssrc)));
 
 });
@@ -148,6 +147,7 @@ gulp.task('image', function () {
     })
     .pipe(gulp.dest(paths.imagedes));
 });
+
 
 /**
  * clean the app folder from unused folders, pug and scss files.
