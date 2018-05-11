@@ -11,13 +11,13 @@
     "url": "git+https://github.com/BenjaminVockenberg/home.git"
   },
   "keywords": [
-    "ben",
+    "angular",
     "benjamin",
     "vockenberg",
     "frontend",
     "development"
   ],
-  "author": "Benjamin Vockenberg",
+  "author": "Benjamin Vockenberg <benjamin.vockenberg@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/BenjaminVockenberg/home/issues"
