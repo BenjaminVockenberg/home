@@ -1,7 +1,7 @@
 {
   "name": "home",
   "version": "1.0.0",
-  "description": "a simple website project for personal purposes",
+  "description": "A simple website project for personal purposes",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -11,9 +11,9 @@
     "url": "git+https://github.com/BenjaminVockenberg/home.git"
   },
   "keywords": [
-    "angular",
-    "benjamin",
-    "vockenberg",
+    "AngularJS",
+    "gulp",
+    "ESlint",
     "frontend",
     "development"
   ],
