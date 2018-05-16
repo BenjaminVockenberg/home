@@ -21,4 +21,10 @@ This is a simple website project I created a long time ago. Originally it was me
   
   fiexed: Bug with gulp uglify. 
   
-  Missing code... did I delete some thing :(
+  Almost finished the layout and design of the page.
+  - pug / SCSS / MediaQueries
+  - Now will prepare the tech tests for 
+  -- mobile
+  -- desktop
+  - Then have to check the wording
+  - then host it on v-4-Vockenberg.com
