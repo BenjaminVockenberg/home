@@ -1,4 +1,4 @@
-// Customized SCSS
+
 @import "reset";    // standard csss reset classes
 @import "basics";   // basic styles like typo, links and so on
 @import "header";   // header that is width and height is 100%
@@ -6,9 +6,10 @@
 @import "font";     // Google Fonts "OpenSans"
 @import "footer";   // Footer
 
-// Bootstrap for some reasons
 @import "../../node_modules/bootstrap/dist/css/bootstrap"; // importing Bootstrap
 
 // Media Queries
+@import "me_device"; // Medium devices like tablet 960px width
 @import "sm_device"; // Small devices like tablet 768px width
 @import "xs_device"; // Very Small devices like tablet 480px width
+
