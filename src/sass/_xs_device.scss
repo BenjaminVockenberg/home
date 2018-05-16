@@ -16,11 +16,7 @@
     }
 
     p {
-        font-size: 28px;
-        line-height: 1.4em;
-        margin: 0 0 2% 0;
-        color: $paragraphColorStandard;
-        font-family: "Rajdhani", sans-serif;
+        margin: 0 0 2% 0;       
         
         &.greeting {
             font-size: 26px;
@@ -37,32 +33,9 @@
                 text-shadow: 0 0 0 rgb( 70, 105, 170 );                
             }		
         }	
-    }
+    }   
 
-    a {
-        text-decoration: none;
-        border-bottom: 2px dashed rgb( 220, 220, 255 );	
-
-        &:hover {
-            text-decoration: none !important;
-            background-color: rgb( 220, 220, 255 );		
-        }
-    }
-
-    span {
-        background-color: rgb(220, 220, 255);	
-    }
-
-    img {
-        line-height: 0;
-        display: block;
-    }
-
-    // Header
-
-    body, html {
-        height: 100%;
-    }
+    // Header    
       
     body {
         padding: 0 0 0 0;
@@ -70,112 +43,13 @@
       
     nav {
         display: none;
-        width: 100%;
-        padding: 0 8%;
-        background-color: rgb( 40, 40, 40 );
-        border-bottom: 1px dashed rgb( 255, 255, 255 );
-        position: fixed;
-        top: 0;
-        left: 0;
-      
-        ul {
-            list-style: none;
-            margin: 0;
-      
-            li {
-                display: inline-block;
-                padding: 4% 2%;
-                font-size: 24px;
-                color: rgb( 255, 255, 255 );
-                line-height: 0;  
-                height: 100%;
-                vertical-align: middle;
-                cursor: pointer;
-            
-                &:hover {
-                    background-color: rgb( 120, 120, 120 );
-                }
-            }
-        }
     }
-      
-    .wide {
-        width: 100%;
-        height: 100%;
-        height: calc( 100% - 1px );
-        background-image: url( '../img/bg/new_header.jpg' );
-        background-position-x: 50%;
-        background-size: cover;
-        background-attachment: fixed;
-        border-bottom: 1px solid rgb( 160, 160, 160 );
-        
-        img {
-            width: 100%;
-        }
-    }
-      
-    .logo {
-        color: #fff;
-        font-weight: 800;
-        font-size: 14pt;
-        padding: 2%;
-        text-align: center;
-    }
-      
-    .line {
-        padding: 20px 0 0 0;
-        white-space: no-wrap;
-        overflow: hidden;
-        text-align: center;
-    }
-
-
     // Layout
     
     section {
-        width: 100%;
-        padding: 2% 8% 2% 8%;
-        background-color: white;
-        clear: both;
-        float: none;
-
-        // section wide "basics" changes
-        ul {
-            font-family: "Rajdhani", sans-serif;
-            list-style-type: square;        
-            
-            li {
-                font-size: 28px;
-                margin: 0 0 0 10%;
-                font-weight: normal;
-                color: rgb( 20, 20, 20 );
-        
-                ul {
-                    
-                    li {
-                        margin: 0 0 0 5%;
-                        font-size: 24px;
-                    }                
-                }
-            }
-        }
 
         // Articles in Sections
         article {
-            width: 100%;
-            padding: 0 2% 0 2%;
-
-            &.profile {            
-                border-right: 0;
-                &.left {
-                    border-right: 0;
-                    border-left: 0;
-
-                    &.white {
-                        border-left: 0;
-                    }
-                }
-            }
             
             &.layout75,
             &.layout50,
@@ -233,15 +107,7 @@
     }
 
     .disturber {
-        display: none;        
-        
-        img {
-            width: 100%;
-        }
-    }
-
-    .center-text {
-        text-align: center;
+        display: none;
     }
 
     .dark {
@@ -261,15 +127,11 @@
         small {
             color: rgb(255, 255, 255);
         }
-        
     }
-
 
     // Footer
     footer {
-        width: 100%;
-        padding: 2% 8% 2% 8%;
-    
+           
         article {
             width: 100%;
             float: none;
@@ -283,7 +145,4 @@
         }
     
     }
-
-
-
 }
