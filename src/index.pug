@@ -12,16 +12,16 @@ html(lang="en")
         script(src="js/angular-mocks.js")
         
         script(src="js/homeGreeterMainCtrl/greet.component.js")
-        script(src="js/homeGreeterMainCtrl/greet.phrases.service.js")       
+        script(src="js/homeGreeterMainCtrl/greet.phrases.service.js")
     
     body
         
         nav 
             ul
-                li Who I am
-                li My skillz
-                li Curriculum vitae
-                li Say'ello
+                li#whoWho I am
+                li#skillz My skillz
+                li#curriculum Curriculum vitae
+                li#contact Say'ello
 
         .wide
             .col-sm-5.line
@@ -34,7 +34,7 @@ html(lang="en")
                 h1.center-text V is for Vockenberg                
                 <greeter-component out="hi()"></greeter-component>
 
-        section#h1           
+        section#who           
 
             h2 My name is Ben!
 
