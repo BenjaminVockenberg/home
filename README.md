@@ -1,7 +1,7 @@
 # Home
 ## a portfolio website
 
-This is a simple website project I created a long time ago. Originally it was meant to be a portfolio site. Now it is more like a testing area. 
+This is a simple website project I created a long time ago. Originally it was meant to be a portfolio site. Now it is more like a testing area. After I deleted the www.psychomonster.com I needed another proof of existence. With this website I'll keep track of my skills and projects I'm workin on.
 
 ## Changes
 
