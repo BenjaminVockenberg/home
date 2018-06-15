@@ -56,7 +56,6 @@ gulp.task('lint', function() {
       .pipe(eslint.format())
       .pipe(eslint({ fix:true }))
       .pipe(gulpIf(isFixed, gulp.dest(paths.jssrc)));
-
 });
 
 /**
@@ -148,7 +147,6 @@ gulp.task('image', function () {
     .pipe(gulp.dest(paths.imagedes));
 });
 
-
 /**
  * clean the app folder from unused folders, pug and scss files.
  */
@@ -180,3 +178,9 @@ gulp.task('build', ['sass', 'pug', 'image', 'fonts', 'uglify', 'json', 'clean'])
  * files for changes
  */
 gulp.task('default', ['browser-sync', 'watch']);
+
+
+/**
+ * TODO: Maybe I need to update to Gulp 4.0.0 soon, most of the gulp stuff 
+ * is depricated already :(
+ */

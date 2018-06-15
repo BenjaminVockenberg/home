@@ -27,24 +27,24 @@
     "angular-mocks": "^1.6.9",
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean": "^0.3.2",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-data": "^1.2.1",
+    "gulp-decompress": "^2.0.2",
     "gulp-eslint": "^4.0.2",
     "gulp-if": "^2.0.2",
-    "gulp-image": "^2.8.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.1.2",
-    "jest": "^22.4.2",
-    "jest-cli": "^22.4.2",
+    "gulp-image": "^4.3.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "jest": "^23.1.0",
+    "jest-cli": "^23.1.0",
     "jshint": "^2.9.5",
     "path": "^0.12.7"
   },
   "dependencies": {
     "angular": "^1.1.6",
-    "angular-route": "^1.1.6",
-    "bootstrap": "^3.3.7"
+    "angular-route": "^1.1.6"
   }
 }
