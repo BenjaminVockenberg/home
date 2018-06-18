@@ -56,4 +56,33 @@ greeterApp.controller('GreeterController', ['$scope', '$log', '$http', '$q', 'ph
             randomNumber : randomNumber
         };
 
-    }]);      
+    }]);    
+    
+    /**
+     * @name appNavigationCtrl
+     * @description helps to navigate through the page
+     */
+    greeterApp.controller('appNavigationCtrl', ['$scope', '$log', '$location', '$anchorScroll', '$element', function($scope, $log, $location, $anchorScroll, $element) {        
+
+        var currentNavPoint = '';
+        var previousNavPoint = '';
+        
+        /**
+         * @name scrollTo
+         * @param {*} id 
+         * @param {*} event 
+         */
+        $scope.scrollTo = function(id, event) {
+            $location.hash(id);
+            if (currentNavPoint !== angular.element(document.querySelector('#' + event.target.id))) {
+                previousNavPoint = currentNavPoint;
+                currentNavPoint = angular.element(document.querySelector('#' + event.target.id));
+                currentNavPoint.addClass('active');
+            } 
+            if (previousNavPoint !== '') {                
+                previousNavPoint.removeClass('active');
+            }            
+            $anchorScroll.yOffset = 50;            
+        };
+
+    }]);

@@ -13,28 +13,29 @@ html(lang="en")
         
         script(src="js/homeGreeterMainCtrl/greet.component.js")
         script(src="js/homeGreeterMainCtrl/greet.phrases.service.js")
+        script(src="js/homeAppNavigationCtrl/homeAppNavigation.component.js")
     
-    body
+    body(ng-app="greeterApp")
         
-        nav 
+        nav(ng-controller="appNavigationCtrl") 
             ul
-                li#whoWho I am
-                li#skillz My skillz
-                li#curriculum Curriculum vitae
-                li#contact Say'ello
+                li#navwho(ng-click="scrollTo('who', $event)") I am
+                li#navskillz(ng-click="scrollTo('skillz', $event)") My skillz
+                li#navcurriculum(ng-click="scrollTo('curriculum', $event)") Curriculum vitae
+                li#navhello(ng-click="scrollTo('hello', $event)") Say'ello
 
         .wide
             .col-sm-5.line
             .col-sm-2.logo
             .col-sm-5.line 
 
-        section.hi(ng-app="greeterApp")
+        section.hi#who
 
             article(ng-controller="GreeterController")
                 h1.center-text V is for Vockenberg                
                 <greeter-component out="hi()"></greeter-component>
 
-        section#who           
+        section           
 
             h2 My name is Ben!
 
@@ -157,7 +158,7 @@ html(lang="en")
 
         .disturber
 
-        section#Curriculum
+        section#curriculum
 
             h2 Curriculum Vitae – its my life
 

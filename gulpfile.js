@@ -179,7 +179,6 @@ gulp.task('build', ['sass', 'pug', 'image', 'fonts', 'uglify', 'json', 'clean'])
  */
 gulp.task('default', ['browser-sync', 'watch']);
 
-
 /**
  * TODO: Maybe I need to update to Gulp 4.0.0 soon, most of the gulp stuff 
  * is depricated already :(
