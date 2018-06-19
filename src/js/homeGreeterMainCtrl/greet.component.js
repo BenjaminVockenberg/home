@@ -10,7 +10,7 @@ greeterApp.component('greeterComponent', {
 greeterApp.controller('GreeterController', ['$scope', '$log', '$http', '$q', 'phrasesService', 
     function($scope, $log, $http, $q, phrasesService) {
 
-        'use strict';        
+        'use strict';
         
         // getting Json data from http and store it an array 
         var promise = phrasesService.getPhrases();        
@@ -23,7 +23,7 @@ greeterApp.controller('GreeterController', ['$scope', '$log', '$http', '$q', 'ph
          */
         var since = function (start, rnd) {
             return start + Math.floor(Math.random() * rnd);
-        };               
+        };
 
         /**
          * @name    randomNumber
@@ -33,7 +33,7 @@ greeterApp.controller('GreeterController', ['$scope', '$log', '$http', '$q', 'ph
          */
         var randomNumber = function (min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
-        };        
+        };
                         
         promise.then(function(data) {            
             
@@ -58,31 +58,3 @@ greeterApp.controller('GreeterController', ['$scope', '$log', '$http', '$q', 'ph
 
     }]);    
     
-    /**
-     * @name appNavigationCtrl
-     * @description helps to navigate through the page
-     */
-    greeterApp.controller('appNavigationCtrl', ['$scope', '$log', '$location', '$anchorScroll', '$element', function($scope, $log, $location, $anchorScroll, $element) {        
-
-        var currentNavPoint = '';
-        var previousNavPoint = '';
-        
-        /**
-         * @name scrollTo
-         * @param {*} id 
-         * @param {*} event 
-         */
-        $scope.scrollTo = function(id, event) {
-            $location.hash(id);
-            if (currentNavPoint !== angular.element(document.querySelector('#' + event.target.id))) {
-                previousNavPoint = currentNavPoint;
-                currentNavPoint = angular.element(document.querySelector('#' + event.target.id));
-                currentNavPoint.addClass('active');
-            } 
-            if (previousNavPoint !== '') {                
-                previousNavPoint.removeClass('active');
-            }            
-            $anchorScroll.yOffset = 50;            
-        };
-
-    }]);

@@ -13,7 +13,7 @@ html(lang="en")
         
         script(src="js/homeGreeterMainCtrl/greet.component.js")
         script(src="js/homeGreeterMainCtrl/greet.phrases.service.js")
-        script(src="js/homeAppNavigationCtrl/homeAppNavigation.component.js")
+        script(src="js/homeGreeterMainCtrl/navigation.component.js")
     
     body(ng-app="greeterApp")
         
@@ -24,10 +24,8 @@ html(lang="en")
                 li#navcurriculum(ng-click="scrollTo('curriculum', $event)") Curriculum vitae
                 li#navhello(ng-click="scrollTo('hello', $event)") Say'ello
 
-        .wide
-            .col-sm-5.line
-            .col-sm-2.logo
-            .col-sm-5.line 
+        // Fullscreen Header
+        header             
 
         section.hi#who
 
@@ -35,7 +33,7 @@ html(lang="en")
                 h1.center-text V is for Vockenberg                
                 <greeter-component out="hi()"></greeter-component>
 
-        section           
+        section
 
             h2 My name is Ben!
 
