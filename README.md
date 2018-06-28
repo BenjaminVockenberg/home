@@ -31,3 +31,7 @@ It still needs a functionally navigation but this is in progress.
   -- desktop
   - Then have to check the wording
   - then host it on v-4-Vockenberg.com
+
+This Website is made by Benjamin Vockenberg
+In 2018
+Contact: benjamin.vockenberg@gmail.com
