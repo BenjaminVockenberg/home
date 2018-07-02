@@ -5,6 +5,8 @@ This is a simple website project I created a long time ago. Originally it was me
 
 It still needs a functionally navigation but this is in progress. 
 
+It needs to be lecturef.
+
 ## Changes
 
 - I switched from jquery to VueJs for testing my PhraseGenerator build with another lib.
