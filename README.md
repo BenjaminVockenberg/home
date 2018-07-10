@@ -5,7 +5,7 @@ This is a simple website project I created a long time ago. Originally it was me
 
 It still needs a functionally navigation but this is in progress. 
 
-It needs to be lecturef.
+It needs to be lectured.
 
 ## Changes
 
