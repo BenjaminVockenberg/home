@@ -37,10 +37,3 @@ It needs to be lectured.
 This Website is made by Benjamin Vockenberg
 In 2018
 Contact: benjamin.vockenberg@gmail.com
-
-_   _                      
-| | | |                     
-| |_| | ___  _ __ ___   ___ 
-|  _  |/ _ \| '_ ` _ \ / _ \
-| | | | (_) | | | | | |  __/
-\_| |_/\___/|_| |_| |_|\___|
