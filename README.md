@@ -7,7 +7,7 @@ It still needs a functionally navigation but this is in progress.
 
 It needs to be lectured.
 
-## Changes
+## Change log
 
 - I switched from jquery to VueJs for testing my PhraseGenerator build with another lib.
 
