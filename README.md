@@ -37,3 +37,5 @@ It needs to be lectured.
 This Website is made by Benjamin Vockenberg
 In 2018
 Contact: benjamin.vockenberg@gmail.com
+
+Todo: migrate to vue and firebase, backup angularjs version
